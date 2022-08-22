@@ -48,7 +48,7 @@ Console.WriteLine($"max number = {max}");
 
 Console.Write("Enter the number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number % 2 == 0) 
+if (number % 2 == 0) //если остаток от деления равен нулю, то число чётное.
 {                             
     Console.Write(number + " is Even Number"); 
 }
@@ -68,3 +68,73 @@ for (int i=0; i<30; i++)
     Console.WriteLine(num);
     num = (-(~num)); num = (-(~num)); // побитовое отрицание, всё что "НЕ"
 }
+
+
+// Семинар 2  
+// Задача 10: Напишите программу, которая принимает на вход трёхзначное число
+// и на выходе показывает вторую цифру этого числа.
+Console.Write("Input three digit number: ");
+int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
+string stringNumber = Convert.ToString(threeDigitNumber);
+Console.WriteLine("Second number" + stringNumber [1]);
+
+ // Задача 13: Напишите программу, которая выводит третью цифру заданного числа
+// или сообщает, что третьей цифры нет.
+ 
+
+Console.Write("Введите трёхзначное число : ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num > 99 && num <= 999)
+{
+    Console.Write("Последняя цифра :" + Math.Abs (num) % 10);
+}
+else
+{
+    Console.Write("Введённое число не трёхзначное");
+}
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, 
+//обозначающую день недели,
+// и проверяет, является ли этот день выходным.
+ Console.Write("Input number of the day: ");
+
+ int day = Convert.ToInt32(Console.ReadLine());
+
+ if (day < 1 || day > 7)
+ {
+     Console.Write("Incorrect number");
+ }
+ else
+ {
+     if (day == 1)
+     {
+         Console.Write("Monday");
+     }
+     if (day == 2)
+     {
+         Console.Write("Tuesday");
+     }
+     if (day == 3)
+     {
+        Console.Write("Wednesday");
+     }
+     if (day == 4)
+     {
+        Console.Write("Thursday");
+     }
+     if (day == 5)
+     {
+        Console.Write("Friday");
+     }
+     if (day == 6)
+     {
+        Console.Write("Saturday day off");
+    }
+    if (day == 7)
+    {
+        Console.Write("Sunday day off");
+    }
+ }
+
+
